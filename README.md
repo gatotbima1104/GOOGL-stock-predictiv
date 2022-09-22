@@ -76,7 +76,7 @@ Pada Gambar 2, Karena yang kita cari adalah Adj Close, maka kita akan fokus ke s
 
 - Multivariate Analysis
 
-Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan dapat disimpulkan bahwa Adj Close memiliki korelasi positif yang kuat terhadap kolom ***Open, High, Low * dan * Close***, sedangkan terhadap kolom Volume tidak memiliki korelasi yang kuat.
+Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan dapat disimpulkan bahwa Adj Close memiliki korelasi positif yang kuat terhadap kolom ***Open, High, Low  dan  Close***, sedangkan terhadap kolom Volume tidak memiliki korelasi yang kuat.
 
 ![multivariate](https://user-images.githubusercontent.com/73319544/191768276-d1524ffe-0223-4a05-8882-a07df27f43f9.png)
 
