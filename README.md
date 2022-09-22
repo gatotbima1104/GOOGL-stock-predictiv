@@ -113,9 +113,9 @@ Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada _Support Vector
 ### Support Vector Regression 
 
 Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Berikut merupakan Hyper Parameter yang digunakan dalam model: 
- - kernel : Hyperparameter ini biasa digunakan untuk menghitung kernel pada matriks sebelumnya.
- - C : Hyperparameter ini biasa digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan.
- - gamma : Hyperparameter ini biasa digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat.
+ - kernel : Hyperparameter ini biasa digunakan untuk menghitung kernel pada matriks sebelumnya, pada model ini menggunakan kernel "rbf" dikarenakan konsep dari kernel ini yang paling banyak digunakan dalam klasifikasi data yang tidak dappat dipisahkan secara linier. 
+ - C : Hyperparameter ini biasa digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan, pada model ini kita gunakan nilai 1000.
+ - gamma : Hyperparameter ini biasa digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat, dalam model ini kita berikan nilai gamma 0.003.
 
 #### kelebihan
 - Lebih efektif pada data dimensi tinggi (data dengan jumlah fitur yang banyak)
@@ -127,9 +127,9 @@ Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klas
 ### Gradient Boost
 
 Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ensembel learning dari decision tree untuk memprediksi nilai. Gradient Boosting sangat mampu menangani pattern yang kompleks dan data ketika linear model tidak dapat menangani. Untuk hyperparameter yang digunakan pada model ini ada 3 yaitu: 
-- learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padded pada waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1
-- n_estimators : Jumlah tahapan boosting yang akan dilakukan pada model.
-- criterion : Hyperparameter yang biasanya digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data
+- learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padded pada waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1, dalam fitting model ini menggunakan nilai 0.01.
+- n_estimators : Jumlah tahapan boosting yang akan dilakukan pada model, pada model ini menggunakan nilai 1000 tahapan.
+- criterion : Hyperparameter yang biasanya digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data, pada model ini menggunakan "squared_error" dimana untuk kesalahan kuadrat rata rata.
 
 #### kelebihan
 - Hasil pemodelan yang lebih akurat
@@ -145,7 +145,7 @@ Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ense
 
 K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan dengan tetangganya atau bisa dikatakan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 
-- n_neighbors : Parameter yang menunjukanJumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
+- n_neighbors : Parameter yang menunjukanJumlah tetangga untuk yang diperlukan untuk menentukan letak data baru, pada model ini kita gunakan nilai 6 pada hyperparameter n_neighbour karena kita hanya ingin 6 titik yang akan digunakan untuk menentukan letak baru.
 
 #### kelebihan
 - Dapat menerima data yang masih noisy
