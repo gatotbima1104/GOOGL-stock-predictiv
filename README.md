@@ -59,9 +59,11 @@ sebelum beranjak ke Data Preparation, kita harus mengetahui data, seperti korela
 - Unvariate Analysis
 <br>
 <image src='StudyKasus-1/img/unvariative.png' width= 500/>
-<br> Karena yang kita cari adalah Adj Close, maka kita akan fokus ke Adj Close
+<br> 
+Karena yang kita cari adalah Adj Close, maka kita akan fokus ke Adj Close
 
 - Multivariate Analysis
+
 Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan dapat disimpulkan bahwa Adj Close memiliki korelasi positif yang kuat terhadap kolom *Open, High, Low * dan * Close *, sedangkan terhadap kolom Volume tidak memiliki korelasi yang kuat.
 <br>
 <image src='StudyKasus-1/img/multivariate.png' width= 500/>
@@ -91,7 +93,7 @@ Pada tahap ini kita ingin agar model bekerja optimal dan maksimal, oleh karena i
 ## Modeling
 Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada Support Vector Regression, Gradient Boost dan KNN.
 
-#### Support Vector Regression 
+### Support Vector Regression 
 Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Berikut merupakan Hyper Parameter yang digunakan dalam model: 
  - kernel : Hyperparameter ini biasa digunakan untuk menghitung kernel pada matriks sebelumnya.
  - C : Hyperparameter ini biasa digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan.
@@ -103,7 +105,7 @@ Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klas
 #### Kekurangan 
 - Sulit dipakai pada data skala besar
 
-#### Gradient Boost
+### Gradient Boost
 Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ensembel learning dari decision tree untuk memprediksi nilai. Gradient Boosting sangat mampu menangani pattern yang kompleks dan data ketika linear model tidak dapat menangani. Untuk hyperparameter yang digunakan pada model ini ada 3 yaitu: 
 - learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padded pada waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1
 - n_estimators : Jumlah tahapan boosting yang akan dilakukan pada model.
@@ -118,7 +120,7 @@ Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ense
 - Waktu komputasi dan desain tinggi
 - Tingkat kesulitan yang tinggi dalam pemilihan model
 
-#### K-Nearest Neighbors (KNN)
+### K-Nearest Neighbors (KNN)
 K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan dengan tetangganya atau bisa dikatakan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 - n_neighbors : Parameter yang menunjukanJumlah tetangga untuk yang diperlukan untuk menentukan letak data baru
 
