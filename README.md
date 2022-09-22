@@ -2,12 +2,12 @@
 
 ## Domain Proyek
 
-Domain yang dipilih dalam proyek machine learning ini adalah Investment & financial, dengan judul * Predictive Analytics of GOOGL stock *
+Domain yang dipilih dalam proyek machine learning ini adalah Investment & financial, dengan judul **Predictive Analytics of GOOGL stock**
 
 ### Latar Belakang 
 Pada dasarnya dunia investasi tidak jauh dari kata saham, coin, crypto, emas dan banyak lainya yang khususnya trend dikalangin gen-Z sekarang, orang yang sudah kenal dunia investasi sejak lama biasanya hidupnya sudah hampir bisa tercukupi untuk dimasa yang akan datang.
 
-Orang yang berinvestasi pada sebuah company itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi company, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada company yang tepat, contohnya tesla kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi twiitter sudah diakuisisi menjadi pemilik penuh dari seorang Elon Musk sekaligus pemilik Tesla. jauh melenceng dari itu GOOGL juga menjadi pesaing yang lumayan bersaing dalam dunia saham, dengan search engine andalanya ia bisa meraup banyak sekali keuntungan dan jika kita berinvestasi didalamnya kitapun akan mendapatkan dampaknya yang bisa naik dalam beberapa tauhn kedepan dalam banyak saham dunia yang dimiliki company.
+Orang yang berinvestasi pada sebuah company itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi company, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada company yang tepat, contohnya **Tesla** kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi **Twiitter** sudah diakuisisi menjadi pemilik penuh dari seorang **Elon Musk** sekaligus pemilik Tesla. jauh melenceng dari itu **GOOGL** juga menjadi pesaing yang lumayan bersaing dalam dunia saham, dengan search engine andalanya ia bisa meraup banyak sekali keuntungan dan jika kita berinvestasi didalamnya kitapun akan mendapatkan dampaknya yang bisa naik dalam beberapa tauhn kedepan dalam banyak saham dunia yang dimiliki company.
 
 Oleh karena itu proyek ini akan mempermudah para investor muda untuk berinvestasi lebih pintar pada company yang tidak akan merugikan dalam rentan waktu beberapa tahun kedepan menggunakan Machine Learning secara conitnu atau bisa kita sebut Time Series Forecasting / Regression.
 
@@ -17,13 +17,13 @@ Forecasting merupakan bagian dari Machine Learning dimana itu salah teknik yang 
 
 ### Problem Statements
 Berdasarkan latar belakang yang telah dijelaskan diawal, berikut beberapa permasalahan yang dapat diselesaikan dalam proyek ini :
-- Apakah GOOGL stock merupakan wadah yang baik untuk investasi jangka panjang, lalu bagaimana cara menganalisis harga dari stock GOOGL? 
+- Apakah **GOOGL** stock merupakan wadah yang baik untuk investasi jangka panjang, lalu bagaimana cara menganalisis harga dari stock **GOOGL**? 
 - Bagaimana memilih algortma dan melatih model terbaik untuk data tersebut?
 - Bagaimana cara menganalisis dan memprediksi harga stock GOOGL menggunakan Forecasting dalam Time Series?
 
 ### Goals
 Tujuan dibuatnya proyek ini sebagai berikut :
-- GOOGL menjadi jawaban positif untuk investor muda dalam berinvestasi untuk hari tua, serta harga dapat dianalisis menggunakan model machine learning.
+- **GOOGL** menjadi jawaban positif untuk investor muda dalam berinvestasi untuk hari tua, serta harga dapat dianalisis menggunakan model machine learning.
 - Melakukan training model terhadap beberapa algoritma dan memilih yang terbaik.
 - Tentu saja ini berita bagus untuk para investor, mereka dapat berinvestasi ke sebuah company yang tanpa adanya keraguan dalam berinvestasi dimasa yang akan datang.
 
@@ -98,7 +98,7 @@ setelah diolah ternyata kita hanya memerlukan kolom Open, High, Low, dan Adj Clo
 Pada tahap ini kita ingin agar model bekerja optimal dan maksimal, oleh karena itu kita akan mengtransformasi data dalam rentan angka 0 hingg1 1 dengan menggunakan MinMaxScaler.
 
 ## Modeling
-Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada Support Vector Regression, Gradient Boost dan KNN.
+Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada _Support Vector Regression, Gradient Boost dan KNN_.
 
 ### Support Vector Regression 
 Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Berikut merupakan Hyper Parameter yang digunakan dalam model: 
