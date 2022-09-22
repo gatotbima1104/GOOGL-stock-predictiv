@@ -7,7 +7,7 @@ Domain yang dipilih dalam proyek machine learning ini adalah Investment & financ
 ### Latar Belakang 
 Pada dasarnya dunia investasi tidak jauh dari kata saham, coin, crypto, emas dan banyak lainya yang khususnya trend dikalangin gen-Z sekarang, orang yang sudah kenal dunia investasi sejak lama biasanya hidupnya sudah hampir bisa tercukupi untuk dimasa yang akan datang.
 
-Orang yang berinvestasi pada sebuah company itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi company, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada company yang tepat, contohnya **Tesla** kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi **Twiitter** sudah diakuisisi menjadi pemilik penuh dari seorang **Elon Musk** sekaligus pemilik Tesla. jauh melenceng dari itu **GOOGL** juga menjadi pesaing yang lumayan bersaing dalam dunia saham, dengan search engine andalanya ia bisa meraup banyak sekali keuntungan dan jika kita berinvestasi didalamnya kitapun akan mendapatkan dampaknya yang bisa naik dalam beberapa tauhn kedepan dalam banyak saham dunia yang dimiliki company.
+Orang yang berinvestasi pada sebuah company itu merupakan salah satu orang yang sudah peduli tentang masa depanya entah itu investasi dalam banyak hal properti ataupun saham misalnya, beberapa tahun belakangan ini kususnya saham teknologi company, hampir bisa menjamin hari tua seseorang jika dia berinvestasi pada company yang tepat, contohnya **Tesla** kemarin yang melonjak naik ratusan persen dikarenakan teknologi yang ia munculkan terlebih lagi **Twitter** sudah diakuisisi menjadi pemilik penuh dari seorang **Elon Musk** sekaligus pemilik Tesla. jauh melenceng dari itu **GOOGL** juga menjadi pesaing yang lumayan bersaing dalam dunia saham, dengan search engine andalanya ia bisa meraup banyak sekali keuntungan dan jika kita berinvestasi didalamnya kitapun akan mendapatkan dampaknya yang bisa naik dalam beberapa tauhn kedepan dalam banyak saham dunia yang dimiliki company.
 
 Oleh karena itu proyek ini akan mempermudah para investor muda untuk berinvestasi lebih pintar pada company yang tidak akan merugikan dalam rentan waktu beberapa tahun kedepan menggunakan Machine Learning secara conitnu atau bisa kita sebut Time Series Forecasting / Regression.
 
@@ -48,13 +48,13 @@ Solusi yang bisa dilakukan agar goals dapat terpenuhi sebagai berikut :
 Pada proyek ini saya mengambil dataset publik dari Kaggle yang berjudul _Goggle Stock Data_ (https://www.kaggle.com/datasets/varpit94/google-stock-data).
 
 Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 kolom diantaranya (Date, Open, High, Low, Close, Adj Close dan Volume), berikut merupakan penjelasan masing masing kolom:
-- Date : Opening rekap data
-- High : Highest price per day
-- Low : Lowest price per day
-- Open : Opening price per day
-- Close : Closing price per day
-- Adj Close : Closing price per day after counting stock split or stock reverse
-- Volume : Volume Transaction price per day
+- **Date**: Opening rekap data
+- **High** : Highest price per day
+- **Low** : Lowest price per day
+- **Open** : Opening price per day
+- **Close** : Closing price per day
+- **Adj Close** : Closing price per day after counting stock split or stock reverse
+- **Volume** : Volume Transaction price per day
 
 ### Eksploratory Data Analysis
 sebelum beranjak ke Data Preparation, kita harus mengetahui data, seperti korelasi, outliner, dan analisis Univariate dan Multivariate anailisis
@@ -64,7 +64,7 @@ sebelum beranjak ke Data Preparation, kita harus mengetahui data, seperti korela
 
 Gambar 1.Outliner Dataset
 
-Pada gambar 1, Jika data numerik divisualisasikan, hanya fitur *Volume* saja yang memiliki banyak outlier. Untuk menangani outlier dengan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara 25% dan 75%. setela selesai kita akan mendapatkan total sampel data yang sudah clean terhadap outliner sebanyak 3861 data dan 7 kolom.
+Pada gambar 1, Jika data numerik divisualisasikan, hanya fitur ***Volume*** saja yang memiliki banyak outlier. Untuk menangani outlier dengan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara **25%** dan **75%**. setela selesai kita akan mendapatkan total sampel data yang sudah clean terhadap outliner sebanyak **3861** data dan **7** kolom.
 
 - Unvariate Analysis
 
@@ -76,13 +76,13 @@ Pada Gambar 2, Karena yang kita cari adalah Adj Close, maka kita akan fokus ke s
 
 - Multivariate Analysis
 
-Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan dapat disimpulkan bahwa Adj Close memiliki korelasi positif yang kuat terhadap kolom *Open, High, Low * dan * Close *, sedangkan terhadap kolom Volume tidak memiliki korelasi yang kuat.
+Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan dapat disimpulkan bahwa Adj Close memiliki korelasi positif yang kuat terhadap kolom ***Open, High, Low * dan * Close***, sedangkan terhadap kolom Volume tidak memiliki korelasi yang kuat.
 
 ![multivariate](https://user-images.githubusercontent.com/73319544/191768276-d1524ffe-0223-4a05-8882-a07df27f43f9.png)
 
 Gambar 3.Multivariate Analysis
 
-Pada Gambar 3, Kita bisa lihat dan berfokus pada kolom Adj Close dengan kolom lainya, pada plot diatas kita bisa berfokus pada plot baris ke-5. terlihat cukup jelas bahwa kolom Adj Close memiliki korelasi positif terhadap kolom High, Open, Low, dan Close. sementara pada kolom Volume memiliki korelasi yang lemah. 
+Pada Gambar 3, Kita bisa lihat dan berfokus pada kolom Adj Close dengan kolom lainya, pada plot diatas kita bisa berfokus pada plot baris **ke-5**. terlihat cukup jelas bahwa kolom Adj Close memiliki korelasi positif terhadap kolom **High, Open, Low, dan Close**. sementara pada kolom **Volume** memiliki korelasi yang lemah. 
 
 Selanjutnya kita bisa membuat heatmap korelasi pada data menggunakan library Seaborn
 
@@ -90,7 +90,7 @@ Selanjutnya kita bisa membuat heatmap korelasi pada data menggunakan library Sea
 
 Gambar 4. Korelasi Heatmap
 
-Pada Gambar 4, untuk memperjelas korelasi kita menggunakan heatmap dan kita tahu bahwa kolom Adj Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka 1 yang berarti kuat dan bisa kita gunakan sebagai Dependent variable terkecuali pada fitur Volume yang mempunyai korelasi lemah.
+Pada Gambar 4, untuk memperjelas korelasi kita menggunakan heatmap dan kita tahu bahwa kolom Adj Close memiliki korelasi positif yang kuat terhadap setiap fitur yang ditandakan dengan angka **1** yang berarti kuat dan bisa kita gunakan sebagai _Dependent variable_ terkecuali pada fitur **Volume** yang mempunyai korelasi lemah.
 
 ## Data Preparation
 Pada tahap ini saya melakukan beberapa tahapan dalam pemrosesan data:
@@ -99,13 +99,13 @@ Pada tahap ini saya melakukan beberapa tahapan dalam pemrosesan data:
 Tahapan awal adalah menghilangkan Missing value pada dataset yang memiliki 2 cara untuk dihapus atau akan diisi dengan nilai rata rata menggunakan library Simpleimputer, karena dataset yang saya gunakan tidak memilki missing value kita bisa lanjut ke tahap selanjutnya
 
 ### Splitting dataset
-Pada tahap ini dataset yang tadi kita sudah diolah kemudian kita bagi menjadi data train dan data test, dengan ratio yang bisa kita atur sendiri, pada proyek ini saya memberikan ratio 80:20, dimana 80% merupakan data train dan 20% merupakan data test yang sudah dibagi menggunakan librari train_test_split dari Sklearn.
+Pada tahap ini dataset yang tadi kita sudah diolah kemudian kita bagi menjadi data train dan data test, dengan ratio yang bisa kita atur sendiri, pada proyek ini saya memberikan ratio **80:20**, dimana **80%** merupakan data train dan **20%** merupakan data test yang sudah dibagi menggunakan librari train_test_split dari Sklearn.
 
 ### Menghapus fitur yang tidak diperlukan 
-setelah diolah ternyata kita hanya memerlukan kolom Open, High, Low, dan Adj Close. oleh karena itu kita bisa drop atau menghapus fitur selain kolom diatas seperti Volume, Date dan Close.
+setelah diolah ternyata kita hanya memerlukan kolom **Open, High, Low, dan Adj Close**. oleh karena itu kita bisa drop atau menghapus fitur selain kolom diatas seperti **Volume, Date dan Close.**
 
 ### Normalization Data
-Pada tahap ini kita ingin agar model bekerja optimal dan maksimal, oleh karena itu kita akan mengtransformasi data dalam rentan angka 0 hingg1 1 dengan menggunakan MinMaxScaler.
+Pada tahap ini kita ingin agar model bekerja optimal dan maksimal, oleh karena itu kita akan mengtransformasi data dalam rentan angka **0** hingga **1** dengan menggunakan MinMaxScaler.
 
 ## Modeling
 Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada _Support Vector Regression, Gradient Boost dan KNN_.
@@ -113,9 +113,9 @@ Pada tahap ini kita menggunakan 3 buah algoritma diantaranya ada _Support Vector
 ### Support Vector Regression 
 
 Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klasifikasi. Pada SVM, algoritma tersebut berusaha mencari jalan terbesar yang bisa memisahkan sampel dari kelas berbeda, sedangkan SVR mencari jalan yang dapat menampung sebanyak mungkin sampel di jalan. Berikut merupakan Hyper Parameter yang digunakan dalam model: 
- - kernel : Hyperparameter ini biasa digunakan untuk menghitung kernel pada matriks sebelumnya, pada model ini menggunakan kernel "rbf" dikarenakan konsep dari kernel ini yang paling banyak digunakan dalam klasifikasi data yang tidak dappat dipisahkan secara linier. 
- - C : Hyperparameter ini biasa digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan, pada model ini kita gunakan nilai 1000.
- - gamma : Hyperparameter ini biasa digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat, dalam model ini kita berikan nilai gamma 0.003.
+ - kernel : Hyperparameter ini biasa digunakan untuk menghitung kernel pada matriks sebelumnya, pada model ini menggunakan kernel **"rbf"** dikarenakan konsep dari kernel ini yang paling banyak digunakan dalam klasifikasi data yang tidak dappat dipisahkan secara linier. 
+ - C : Hyperparameter ini biasa digunakan untuk menukar klasifikasi yang benar dari contoh training terhadap maksimalisasi margin fungsi keputusan, pada model ini kita gunakan nilai **1000**.
+ - gamma : Hyperparameter ini biasa digunakan untk menetukan seberapa jauh pengaruh satu contoh pelatihan mencapai, dengan nilai rendah berarti jauh dan nilai tinggi berarti dekat, dalam model ini kita berikan nilai gamma **0.003**.
 
 #### kelebihan
 - Lebih efektif pada data dimensi tinggi (data dengan jumlah fitur yang banyak)
@@ -127,9 +127,9 @@ Algoritma ini hampir sama seperti SVM tetapi pada SVM biasa digunakan dalam klas
 ### Gradient Boost
 
 Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ensembel learning dari decision tree untuk memprediksi nilai. Gradient Boosting sangat mampu menangani pattern yang kompleks dan data ketika linear model tidak dapat menangani. Untuk hyperparameter yang digunakan pada model ini ada 3 yaitu: 
-- learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padded pada waktu proses training. Umumnya nilai learning rate berkisar antara 0 hingga 1, dalam fitting model ini menggunakan nilai 0.01.
-- n_estimators : Jumlah tahapan boosting yang akan dilakukan pada model, pada model ini menggunakan nilai 1000 tahapan.
-- criterion : Hyperparameter yang biasanya digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data, pada model ini menggunakan "squared_error" dimana untuk kesalahan kuadrat rata rata.
+- learning_rate : Hyperparameter training yang digunakan untuk menghitung nilai koreksi bobot padded pada waktu proses training. Umumnya nilai learning rate berkisar antara **0** hingga **1**, dalam fitting model ini menggunakan nilai **0.01**.
+- n_estimators : Jumlah tahapan boosting yang akan dilakukan pada model, pada model ini menggunakan nilai **1000** tahapan.
+- criterion : Hyperparameter yang biasanya digunakan untuk menemukan fitur dan ambang batas optimal dalam membagi data, pada model ini menggunakan "**squared_error**" dimana untuk kesalahan kuadrat rata rata.
 
 #### kelebihan
 - Hasil pemodelan yang lebih akurat
@@ -145,7 +145,7 @@ Gradient Boosting adalah algoritma machine learning yang menggunakan teknik ense
 
 K-Nearest Neighbors merupakan algoritma machine learning yang bekerja dengan mengklasifikasikan data baru menggunakan kemiripan dengan tetangganya atau bisa dikatakan antara data baru dengan sejumlah data (k) pada data yang telah ada. Algoritma ini dapat digunakan untuk klasifikasi dan regresi. Untuk hyperparameter yang digunakan pada model ini hanya 1 yaitu :
 
-- n_neighbors : Parameter yang menunjukanJumlah tetangga untuk yang diperlukan untuk menentukan letak data baru, pada model ini kita gunakan nilai 6 pada hyperparameter n_neighbour karena kita hanya ingin 6 titik yang akan digunakan untuk menentukan letak baru.
+- n_neighbors : Parameter yang menunjukanJumlah tetangga untuk yang diperlukan untuk menentukan letak data baru, pada model ini kita gunakan nilai **6** pada hyperparameter n_neighbour karena kita hanya ingin 6 titik yang akan digunakan untuk menentukan letak baru.
 
 #### kelebihan
 - Dapat menerima data yang masih noisy
