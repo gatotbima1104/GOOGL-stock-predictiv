@@ -170,6 +170,9 @@ pada tahap ini saya akan mencoba memprediksi menggunakan algortma yang kita pili
 <image src='StudyKasus-1/img/Prediksi.png' width= 500/>
 <br> 
 
-## Referensi
-
-
+## Referensi :
+* Sidhu, R. (sep 30, 2019).KNN Classification Algorithm in Python.Medium, from https://medium.com/x8-the-ai-community/knn-classification-algorithm-in-python-65e413e1cea0
+* Saputri, L. (2016). IMPLEMENTASI JARINGAN SARAF TIRUAN RADIAL BASIS FUNCTION (RBF) PADA PERAMALAN FOREIGN EXCHANGE (FOREX).
+* Investors' risk attitudes in the pandemic and the stock market: new evidence based on internet searches (26 June 2020), from https://www.bis.org/publ/bisbull25.htm
+* Spiliotis E. Decision Trees for Time-Series Forecasting (january 2022), from https://www.researchgate.net/publication/359865759_Decision_Trees_for_Time-Series_Forecasting
+*  Gudekar A. Stock Prediction Application using Machine Learning(April 2022) from https://www.researchgate.net/publication/360300426_Stock_Prediction_Application_using_Machine_Learning
