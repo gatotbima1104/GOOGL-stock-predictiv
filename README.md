@@ -2,7 +2,7 @@
 
 ## Domain Proyek
 
-Domain yang dipilih dalam proyek machine learning ini adalah Investment & financial, dengan judul Predictive Analytics of GOOGL stock 
+Domain yang dipilih dalam proyek machine learning ini adalah Investment & financial, dengan judul * Predictive Analytics of GOOGL stock *
 
 ### Latar Belakang 
 Pada dasarnya dunia investasi tidak jauh dari kata saham, coin, crypto, emas dan banyak lainya yang khususnya trend dikalangin gen-Z sekarang, orang yang sudah kenal dunia investasi sejak lama biasanya hidupnya sudah hampir bisa tercukupi untuk dimasa yang akan datang.
