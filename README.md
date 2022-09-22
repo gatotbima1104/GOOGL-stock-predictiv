@@ -51,23 +51,27 @@ Dataset yang digunakan memiliki format .csv, mempunyai total 4431 data dengan 7 
 
 ### Eksploratory Data Analysis
 sebelum beranjak ke Data Preparation, kita harus mengetahui data, seperti korelasi, outliner, dan analisis Univariate dan Multivariate anailisis
-- Mengangani Outliner 
+- Mengangani adanya Outliner 
 <br>
-<image src='' width= 500/>
+<image src='StudyKasus-1/img/outliner_before.png' width= 500/>
 <br> Jika data numerik divisualisasikan, hanya fitur *Volume* saja yang memiliki banyak outlier. Untuk menangani outlier dengan menggunakan IQR Method yaitu dengan menghapus data yang berada diluar IQR yaitu antara 25% dan 75%. setela selesai kita akan mendapatkan total sampel data yang sudah clean terhadap outliner sebanyak 3861 data dan 7 kolom.
 
 - Unvariate Analysis
 <br>
-<image src='' width= 500/>
+<image src='StudyKasus-1/img/unvariative.png' width= 500/>
 <br> Karena yang kita cari adalah Adj Close, maka kita akan fokus ke Adj Close
 
 - Multivariate Analysis
 Pada kali ini kita akan menganalisis korealsi Adj Close terhadap fitur lain. dan dapat disimpulkan bahwa Adj Close memiliki korelasi positif yang kuat terhadap kolom *Open, High, Low * dan * Close *, sedangkan terhadap kolom Volume tidak memiliki korelasi yang kuat.
 <br>
-<image src='' width= 500/>
+<image src='StudyKasus-1/img/multivariate.png' width= 500/>
 <br>
 
 Selanjutnya membuat heatmap korelasi, disini setelah divisualisasi kita tahu bahwa Adj Close memiliki korelasi positif yang kuat terhadap setiap fitur terkecuali pada Volume.
+
+<br>
+<image src='StudyKasus-1/img/heatmap_correlation.png' width= 500/>
+<br>
 
 ## Data Preparation
 Pada tahap ini saya melakukan beberapa tahapan dalam pemrosesan data:
@@ -133,7 +137,7 @@ Untuk proyek kali ini kita akan menggunakan model K-Nearest Neighbors karena mem
 Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), dimana dia akan mengukur seberapa dekat garis pas dengan titik pada data. 
 
 <br>
-<image src='' width= 500/>
+<image src='StudyKasus-1/img/mse_rumus.png' width= 500/>
 <br> 
 
 - n = Jumlah titik data
@@ -142,14 +146,27 @@ Pada tahap evaluasi ini metrik yang digunakan adalah Mean Squared Error (MSE), d
 
 berikut merupakan tampilan hasil akurasi model 
 <br>
-<image src='' width= 500/>
+<image src='StudyKasus-1/img/mse.png' width= 500/>
 <br> 
 
 <br>
-<image src='' width= 500/>
+<image src='StudyKasus-1/img/mse_plot.png' width= 500/>
 <br> 
 
+<br>
+<image src='StudyKasus-1/img/mse_accuracy.png' width= 500/>
+<br> 
+
+Visualisasi diatas menunjukan bahwa KNN memiliki akurasi yagn paling tinggi untuk model. 
+
 Pada proyek ini semua model berjalan dengan sangat baik dan maksimal dan hanya terdapat selisih sangat kecil diantara ketiganya akan tetapi kita akan memilih model yang paling tinggi akurasinya, dimana K-Nearest Neighbors (KNN) adalah algortima yang memiliki nilai tertinggi.
+
+### Forecasting
+pada tahap ini saya akan mencoba memprediksi menggunakan algortma yang kita pili diatas yaitu KNN dalam kurun waktu 30 hari kedepan 
+
+<br>
+<image src='StudyKasus-1/img/Prediksi.png' width= 500/>
+<br> 
 
 ## Referensi
 
